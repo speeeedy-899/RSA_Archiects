@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 @media (min-width: 768px) {
 .navbar-brand.abs
     {
@@ -21,23 +27,38 @@
 
 
 /* Loader CSS */
-/* .loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+
+
+
+.preload{
+  position: fixed;
   top: 0;
-  left: 0;
-  background-color: #242f3f;
-  display:flex;
+  width: 100%;
+  height: 100vh;
+  background: #4a72a7;
+  box-sizing: border-box;
+  display: flex;
   justify-content: center;
   align-items: center;
+  transition-delay: 6.5s;
+  transition-property: opacity 0.5s ease-out;
+  z-index: 111;
 }
 
-.loader{
-  margin-left: auto;
-  margin-right: auto;
+.preload h1{
+  position: absolute;
+  top: 80%;
+  font-family: cursive;
+  color: white;
 }
- */
+
+
+.preload-finish{
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 
 
 
@@ -54,7 +75,6 @@
 
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 body {
   color: #5a5a5a;
