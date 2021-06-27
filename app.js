@@ -1,12 +1,11 @@
 
-// Preloader functions and actions
+const menu = document.querySelector(".menu");
+const navLinks = document.querySelector(".menu-links");
+const links = document.querySelectorAll(".menu-links li");
 
-window.addEventListener("load", function(){
-  const preload = document.querySelector(".preload");
-  preload.classList.add("preload-finish");
-  // preload.slideUp(default, 400);
+menu.addEventListener("click", function() {
+  navLinks.classList.toggle("menu-active");
+  links.forEach(link=>{
+    link.classList.toggle("fade");
+  });
 });
-
-
-
-// Preloader functions end
