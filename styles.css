@@ -4,11 +4,16 @@ html, body{
 }
 
 body{
-  overflow: hidden;
-  background-image: url("https://images.alphacoders.com/435/435117.jpg");
+  overflow-x: hidden;
+  /* background-image: url("https://images.alphacoders.com/435/435117.jpg"); */
+  background-color: gray;
 }
 
-/* Menu Animation and Related Stuff Start */
+/*-------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Complete Menu Related Stuff--------------------------------------------------
+ --------------------------------------------------------------------------------------------------------------------------*/
+
+
 
 .menu-container{
   position: relative;
@@ -21,7 +26,6 @@ body{
   text-align: right;
   cursor: pointer;
   display: inline;
-
 }
 .menu-links{
   margin-bottom: 0;
@@ -34,7 +38,7 @@ body{
   justify-content: space-around;
   align-items: center;
 
-  clip-path: circle(100px at 110% -10%);
+  clip-path: circle(100px at 110% -20%);
   -webkit-clip-path: circle(100px at 110% -20%);
   transition: all 0.75s ease-in-out;
   pointer-events: none;
@@ -46,8 +50,10 @@ body{
   height: 60%;
   align-items: center;
 }
+
+/* Menu Open Animation */
 .menu-active{
-  clip-path: circle(2500px at 110% -10%);
+  clip-path: circle(2500px at 110% -20%);
   -webkit-clip-path: circle(2500px at 110% -20%);
   pointer-events: all;
 }
@@ -60,7 +66,6 @@ body{
 .menu-links li{
   opacity: 0;
 }
-
 .menu-links li:nth-child(1){
   transition: all 0.5s ease 0.3s;
 }
@@ -75,11 +80,10 @@ li.fade{
 }
 
 
-
+/* Menu link underline animation */
 .underline{
   position: relative;
 }
-
 .underline::before{
   content: '';
   position: absolute;
@@ -91,7 +95,6 @@ li.fade{
   background-color: #fff;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
     left: 0;
@@ -99,10 +102,6 @@ li.fade{
     width: 100%;
   }
 }
-
-
-/* Menu Animation and Related Stuff End */
-
 
 /* Menu Icon Animation Start */
 svg {
@@ -154,9 +153,25 @@ path:nth-child(6) {
 .active path:nth-child(6) {
   transform: translateX(9px) translateY(1px) rotate(45deg);
 }
-
 /* Menu Icon Animation End */
 
-.image{
-  z-index: -1;
+
+/* RSA Architects Heading */
+.showcase{
+  /* height: 100vh; */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  width: 30%;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+  top: 0;
+  padding-left: 2%;
+  /* width: 30%; */
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
